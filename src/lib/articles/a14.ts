@@ -11,8 +11,8 @@ export const a14: Article = {
   publishedAt: "2026-10-17",
   updatedAt: "2026-10-17",
   image: {
-    src: "/images/articles/09-santa-ana-wind-roof-damage-missing-shingles-1600.jpg",
-    alt: "Asphalt shingles missing along a roof edge after wind",
+    src: "/images/articles/14-windward-eave-lifted-tabs-1600.jpg",
+    alt: "Lifted shingle tabs along the windward eave of a hillside house",
   },
   relatedArticles: [
     "rachel-then-the-santa-ana",

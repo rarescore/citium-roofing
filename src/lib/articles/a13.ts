@@ -12,6 +12,7 @@ export const a13: Article = {
   },
   "publishedAt": "2026-09-28",
   "updatedAt": "2026-09-28",
+  "image": { "src": "/images/articles/13-repair-beside-new-shingles-1600.jpg", "alt": "A roof slope with worn shingles beside a new section of shingles" },
   "relatedArticles": [
     "your-la-roof-is-lying-to-you",
     "roof-repair-cost-glendale-ca",

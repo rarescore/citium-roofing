@@ -6,6 +6,7 @@ import {ArrowDown,ArrowUpRight,Move,MapPin,Plus,Minus,Pause,Play} from 'lucide-r
 import {Slider} from '@/components/ui/slider';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {articles} from '@/lib/content';
+import {ClothesLine} from './clothes-line';
 import {layers} from '@/lib/roof-layers';
 import {MeasureHero} from './measure-roof';
 import {JobHero} from './job-hero';
@@ -27,7 +28,6 @@ function DeferredStudio(){const ref=useRef<HTMLDivElement>(null);const[show,setS
 export default function CinematicHome(){return <><JobHero/><VisitBooking/><DeferredStudio/><WhyCitium/><HomeServices/><section className="material-index"><div className="material-index-heading"><span className="micro-label">ROOFS ARE NOT ALL THE SAME</span><h2>Different materials.<br/>Same attention.</h2><Link href="/roofing-systems">Explore our systems <ArrowUpRight size={19}/></Link></div><div className="material-ribbons">{[['Shingles','A dimensional surface.','shingles'],['Tile','Shaped by light.','tile'],['TPO','Continuous. Precise.','tpo'],['Modified bitumen','Protection in layers.','modified-bitumen']].map(([n,d,s])=><Link key={s} className={'material-ribbon ribbon-'+s} href={'/'+s}><span>{n}</span><p>{d}</p><ArrowUpRight size={24}/></Link>)}</div></section><HomeArticles/><section className="cinematic-trust"><div className="preferred"><img src="/images/oc-preferred.png" alt="Owens Corning Preferred Contractor" width="240" height="74" loading="lazy" decoding="async"/></div><p>Rooted in Glendale.<br/>Here for Southern California.</p><a href="tel:+18185311277">Let’s talk about your roof. <ArrowUpRight size={20}/></a></section></>}
 
 function HomeArticles(){
-  const featured=articles.slice(0,4);
   return (
     <section className="home-articles" id="resources">
       <div className="home-articles-head">
@@ -35,16 +35,7 @@ function HomeArticles(){
         <h2>What Los Angeles roofs<br/>actually need.</h2>
         <Link href="/articles">All guides <ArrowUpRight size={19}/></Link>
       </div>
-      <div className="home-articles-grid">
-        {featured.map((a)=>(
-          <Link key={a.slug} className="home-article-card" href={"/articles/"+a.slug}>
-            {a.image && <img src={a.image.src.replace("1600.jpg", "800.webp")} alt={a.image.alt} width="800" height="533" loading="lazy" decoding="async" />}
-            <span>{a.category}</span>
-            <h3>{a.title}</h3>
-            <p>{a.description}</p>
-          </Link>
-        ))}
-      </div>
+      <ClothesLine items={articles.map((a)=>({href:"/articles/"+a.slug,title:a.title,src:a.image?.src,alt:a.image?.alt}))}/>
     </section>
   );
 }

@@ -224,6 +224,26 @@ export const seoPages: SeoPage[] = [
     updated: U,
   },
   {
+    path: "/cookie-policy",
+    title: "Cookie Policy | Citium Roofing Solutions, Glendale CA",
+    description:
+      "Citium Roofing uses an essential cookie to remember your choice. Analytics and advertising stay off unless you allow them. No ad pixel is installed.",
+    h1: "Cookie Policy",
+    label: "Cookie policy",
+    index: false,
+    updated: "2026-10-17",
+  },
+  {
+    path: "/area-performance",
+    title: "Service Area Performance | Citium Roofing",
+    description:
+      "Estimated visit and inquiry totals for Citium's service areas. Locations are connection estimates, not street addresses, and no IP addresses are stored.",
+    h1: "Estimated visits and inquiries",
+    label: "Area performance",
+    index: false,
+    updated: "2026-10-17",
+  },
+  {
     path: "/terms",
     title: "Terms of Use | Citium Roofing Solutions, Glendale CA",
     description:

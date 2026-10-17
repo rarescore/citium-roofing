@@ -12,6 +12,7 @@ export const a11: Article = {
   },
   "publishedAt": "2026-09-28",
   "updatedAt": "2026-09-28",
+  "image": { "src": "/images/articles/11-pipe-boot-repair-glendale-1600.jpg", "alt": "A gloved hand sealing a pipe boot on a composition shingle roof" },
   "relatedArticles": [
     "roof-repair-vs-replacement",
     "why-is-my-tile-roof-leaking",

@@ -163,6 +163,10 @@ const page: LocalPage = {
     {
      "anchor": "Santa Ana wind roof damage checklist",
      "href": "/articles/the-santa-anas-dont-break-good-roofs"
+    },
+    {
+     "anchor": "Glendale wind damage and repair guide",
+     "href": "/articles/glendale-roof-wind-damage-repair-guide"
     }
    ],
    "sources": [

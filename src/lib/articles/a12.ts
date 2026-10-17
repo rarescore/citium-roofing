@@ -12,6 +12,7 @@ export const a12: Article = {
   },
   "publishedAt": "2026-09-28",
   "updatedAt": "2026-09-28",
+  "image": { "src": "/images/articles/12-aged-clay-tile-close-1600.jpg", "alt": "Aged clay barrel tiles in Southern California sun" },
   "relatedArticles": [
     "why-is-my-tile-roof-leaking",
     "roof-repair-vs-replacement",

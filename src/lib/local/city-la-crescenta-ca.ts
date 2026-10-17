@@ -161,6 +161,10 @@ const page: LocalPage = {
     {
      "anchor": "Santa Ana wind roof damage checklist",
      "href": "/articles/the-santa-anas-dont-break-good-roofs"
+    },
+    {
+     "anchor": "La Crescenta wind and hillside roofing guide",
+     "href": "/articles/la-crescenta-roofing-wind-planning-guide"
     }
    ],
    "sources": [

@@ -16,4 +16,10 @@ import { a13 } from './articles/a13';
 import { a14 } from './articles/a14';
 import { a15 } from './articles/a15';
 
-export const packedArticles: Article[] = [a14,a15,a01,a02,a03,a04,a05,a06,a07,a08,a09,a10,a11,a12,a13];
+import { a16 } from './articles/a16';
+import { a17 } from './articles/a17';
+import { a18 } from './articles/a18';
+import { a19 } from './articles/a19';
+import { a20 } from './articles/a20';
+
+export const packedArticles: Article[] = [a16,a17,a18,a19,a20,a14,a15,a01,a02,a03,a04,a05,a06,a07,a08,a09,a10,a11,a12,a13];

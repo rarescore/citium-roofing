@@ -137,6 +137,10 @@ const page: LocalPage = {
      "href": "/articles/the-santa-anas-dont-break-good-roofs"
     },
     {
+     "anchor": "Tujunga repair or replacement guide",
+     "href": "/articles/tujunga-roof-repair-replacement-budget-guide"
+    },
+    {
      "anchor": "Class A roofing in fire hazard zones",
      "href": "/articles/the-roof-that-can-save-your-insurance"
     }

@@ -139,6 +139,10 @@ const page: LocalPage = {
     {
      "anchor": "Santa Ana wind roof damage checklist",
      "href": "/articles/the-santa-anas-dont-break-good-roofs"
+    },
+    {
+     "anchor": "Burbank flat roof repair guide",
+     "href": "/articles/burbank-flat-roof-repair-leak-guide"
     }
    ],
    "sources": [

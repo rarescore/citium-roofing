@@ -286,32 +286,113 @@ export function Privacy() {
         <h2>What you provide</h2>
         <p>
           The inquiry forms request your name, property address, email, and phone number. You may also provide
-          project information. Do not submit financial account details, identification numbers, or sensitive
-          documents.
+          project information. The homepage visit form asks for your name, phone, property address, and the day and
+          time you want the visit. An email address is requested only if you check the box to receive email
+          promotions. Do not submit financial account details, identification numbers, or sensitive documents.
         </p>
         <h2>Where it goes</h2>
         <p>
-          Contact, estimate, financing, customer-service, and roof-measurement forms email
+          Contact, estimate, financing, customer-service, roof-measurement, and visit-booking forms email
           citiuminc@gmail.com in the background as soon as you submit. Citium uses that message to follow
-          up about your roof. Do not include financial account numbers or sensitive documents.
+          up about your roof. The inquiry itself is not stored in a cookie.
         </p>
         <h2>In this website</h2>
         <p>
           The form does not save your inquiry in browser storage. Your entries remain in the page while it is
           open. The project map loads OpenStreetMap when you open the map view; that provider receives standard
-          connection information.
+          connection information. Address suggestions send the text you type to the site so it can offer matching
+          addresses. That request is part of the form, not advertising.
+        </p>
+        <h2>Cookies</h2>
+        <p>
+          An essential first-party cookie, citium_consent, remembers whether you allowed analytics or marketing
+          cookies, and which version of this notice you saw. It lasts about six months. The site also keeps the
+          same choice in this browser's local storage. You can change it any time from Cookie settings in the
+          footer. Rejecting optional cookies does not block booking, calling, browsing, or sending a form.
+        </p>
+        <p>
+          If your browser sends Global Privacy Control, marketing stays off unless you later turn it on yourself.
+          See the <a href="/cookie-policy">cookie policy</a> for the categories.
         </p>
         <h2>Site analytics</h2>
         <p>
-          This website may use Google Analytics to count visits and interactions such as calls, email links, and form
-          submissions. Google Analytics uses cookies and receives standard connection information; it does not
-          receive the contents of your inquiry. You can opt out with your browser settings or the Google Analytics
-          opt-out browser add-on.
+          Analytics stays off until you allow it. Google Analytics 4, Google Tag Manager, and Microsoft Clarity
+          each load only when that product's ID is configured and you have allowed analytics. If an ID is not set,
+          allowing analytics does not contact that product. When a product is both configured and allowed, it may
+          receive the page path, the campaign parameters in the link you clicked, the kind of device, and events
+          such as a phone click or the fact that a form was submitted. It does not receive your name, phone number,
+          email address, or the address you typed. Google Analytics is asked to anonymize IP addresses. Clarity
+          session recordings mask every form field. No analytics script is added before consent. After analytics
+          cookies are allowed, the server may count an estimated city, region, and country from the connection
+          toward service-area totals. That estimate is not a street address, and the raw IP address is not stored.
+          The ZIP you type on the estimate form is the property ZIP you choose to give us. Photos you attach stay
+          with the office lead record. They are not sent to an advertising or analytics service.
+        </p>
+        <h2>Advertising</h2>
+        <p>
+          Marketing stays off until you allow it. A Meta pixel and Google Ads conversion tag load only when their
+          IDs are configured and you have allowed marketing. If those IDs are not set, allowing marketing does not
+          contact an ad network. When they are set, a successful booking or estimate can be counted as one
+          conversion. The conversion does not include your name, phone, email, or property address. If Google Tag
+          Manager is configured, it is the only loader for Google and Meta tags, so the same conversion is not
+          sent twice.
         </p>
         <h2>Questions or corrections</h2>
         <p>
           Contact Citium at <a href="mailto:citiuminc@gmail.com">citiuminc@gmail.com</a> or{" "}
-          <a href="tel:+18185311277">818-531-1277</a> about information you have submitted.
+          <a href="tel:+18185311277">818-531-1277</a> about information you have submitted. This page describes how
+          the site behaves. It is not a legal opinion that every privacy law has been satisfied.
+        </p>
+      </div>
+    </>
+  );
+}
+
+export function CookiePolicy() {
+  return (
+    <>
+      <Intro
+        tag="COOKIES"
+        title={"Your choice.\nNothing extra until then."}
+        copy="This page lists the cookies this site uses and the ones it does not."
+        h1={seoPage("/cookie-policy")?.h1}
+      />
+      <div className="prose">
+        <h2>Essential</h2>
+        <p>
+          citium_consent is a first-party cookie. It stores your analytics and marketing choice, the date of that
+          choice, and the version of this policy. The same record is kept in local storage under citium.consent.
+          It is kept for about six months. The site needs it to remember that you rejected or accepted optional
+          cookies. Booking, phone calls, and forms do not depend on analytics or marketing cookies.
+        </p>
+        <p>
+          If you sign in to a site tool, the site may also set a session cookie so the sign-in stays in place.
+          The public estimate and visit forms do not require an account.
+        </p>
+        <h2>Analytics</h2>
+        <p>
+          Off until you allow it. Google Analytics 4, Google Tag Manager, and Microsoft Clarity load only when
+          that product's ID is configured. If no ID is set, the choice does not start the product. A configured
+          tag may store its own cookies and receive the page path, campaign parameters, device category, and
+          events for calls and forms. Names, phone numbers, email addresses, and property addresses are not
+          included. Form fields are masked in Clarity recordings.
+        </p>
+        <h2>Marketing</h2>
+        <p>
+          Off until you allow it. Meta and Google Ads load only when their IDs are configured. Allowing marketing
+          without those IDs does not contact an advertising network. A successful lead can count as one conversion,
+          without the personal details from the form.
+        </p>
+        <h2>Global Privacy Control</h2>
+        <p>
+          If the browser sends Global Privacy Control, marketing remains off unless you explicitly turn marketing
+          on after that signal. You can review the choice from Cookie settings in the footer.
+        </p>
+        <h2>Change your mind</h2>
+        <p>
+          Use Cookie settings in the footer, or choose again the next time the banner appears after a policy
+          update. You can also clear this site's cookies in the browser. Questions:{" "}
+          <a href="mailto:citiuminc@gmail.com">citiuminc@gmail.com</a> or <a href="tel:+18185311277">818-531-1277</a>.
         </p>
       </div>
     </>

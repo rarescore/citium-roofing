@@ -10,8 +10,14 @@ function bodyText(lead: Lead) {
     `Phone: ${lead.phone}`,
     `Email: ${lead.email}`,
     `Property: ${lead.address}`,
+    lead.zip ? `ZIP entered on the form: ${lead.zip}` : "",
+    lead.urgency === "emergency" ? "Urgency: emergency leak" : "Urgency: standard request",
+    lead.contactMethod ? `Preferred contact: ${lead.contactMethod}` : "",
     lead.service ? `Service: ${serviceLabel(lead.service)}` : "",
     lead.design ? `Roof design: ${lead.design}` : "",
+    lead.landingPage ? `Landing page: ${lead.landingPage}` : "",
+    lead.trafficSource ? `Traffic source: ${lead.trafficSource}` : "",
+    lead.campaign ? `Campaign: ${lead.campaign}` : "",
     lead.message ? `Message:\n${lead.message}` : "",
     "",
     `Received: ${new Date().toISOString()}`,
@@ -68,6 +74,9 @@ async function sendFormSubmit(lead: Lead) {
   form.set("email", lead.email);
   form.set("phone", lead.phone);
   form.set("address", lead.address);
+  if (lead.zip) form.set("zip", lead.zip);
+  form.set("urgency", lead.urgency || "standard");
+  form.set("preferred_contact", lead.contactMethod || "phone");
   form.set("kind", lead.kind);
   form.set("service", serviceLabel(lead.service));
   form.set("design", lead.design || "");

@@ -11,8 +11,8 @@ export const a15: Article = {
   publishedAt: "2026-10-17",
   updatedAt: "2026-10-17",
   image: {
-    src: "/images/articles/10-tpo-flat-roof-inspection-los-angeles-1600.jpg",
-    alt: "A roofer inspecting the seams and drains of a white flat roof",
+    src: "/images/articles/15-wet-scupper-after-rain-1600.jpg",
+    alt: "Rainwater beading toward a scupper on a low-slope roof",
   },
   relatedArticles: [
     "after-the-october-16-santa-ana",

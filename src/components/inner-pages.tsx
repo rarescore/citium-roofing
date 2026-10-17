@@ -4,7 +4,7 @@ import { pageInfo, services, articles } from "@/lib/content";
 import { Intro, FormPage } from "@/components/inner-forms";
 import { seoPage } from "@/lib/pages";
 import { Service, Catalog, StudioPage, Systems } from "@/components/inner-services";
-import { Process, Warranty, About, Faq, Terms, Privacy } from "@/components/inner-story";
+import { Process, Warranty, About, Faq, Terms, Privacy, CookiePolicy } from "@/components/inner-story";
 
 export { StudioPage } from "@/components/inner-services";
 
@@ -60,6 +60,8 @@ export function InnerPage({ slug }: { slug: string }) {
         <Terms />
       ) : slug === "privacy" ? (
         <Privacy />
+      ) : slug === "cookie-policy" ? (
+        <CookiePolicy />
       ) : null}
 
     </>

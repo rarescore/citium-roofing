@@ -1,0 +1,12 @@
+node_modules
+dist
+.netlify
+.vercel
+.grok
+.tanstack
+artifacts
+attachments
+screenshots
+*.log
+.env
+.env.*

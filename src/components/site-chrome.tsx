@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowUpRight, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "@/lib/citium-link";
 import { NAP } from "@/lib/site";
+import { openConsentSettings } from "@/lib/consent";
 import { CITY_CARDS, SERVICE_NAV } from "@/lib/local-pages";
 
 type NavItem = {
@@ -202,6 +203,11 @@ export function Footer() {
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Citium Roofing Solutions</span>
         <Link href="/privacy">Privacy</Link>
+        <Link href="/cookie-policy">Cookie policy</Link>
+        <button type="button" className="footer-consent" onClick={() => openConsentSettings()}>
+          Cookie settings
+        </button>
+        <Link href="/area-performance">Area totals</Link>
         <Link href="/terms">Terms</Link>
         <Link href="/faq">FAQ</Link>
         <span>Built layer by layer.</span>

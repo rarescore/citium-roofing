@@ -12,6 +12,7 @@ export const a05: Article = {
   },
   "publishedAt": "2026-09-18",
   "updatedAt": "2026-09-28",
+  "image": { "src": "/images/articles/01-new-cool-roof-san-fernando-valley-ranch-1600.jpg", "alt": "A new cool shingle roof on a San Fernando Valley ranch house" },
   "relatedArticles": [
     "roof-repair-vs-replacement",
     "what-actually-happens-when-they-tear-your-roof-off",

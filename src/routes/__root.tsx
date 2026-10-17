@@ -3,6 +3,8 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { Header, Footer } from "@/components/site-chrome";
 import { MobileCta } from "@/components/mobile-cta";
 import { AnalyticsBoot } from "@/components/analytics-boot";
+import { CookieConsent } from "@/components/cookie-consent";
+import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Link } from "@/lib/citium-link";
 import { SITE_NAME, siteGraph, jsonLd } from "@/lib/site";
@@ -64,6 +66,7 @@ function RootLayout() {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
         <HeadContent />
       </head>
       <body>
@@ -79,6 +82,7 @@ function RootLayout() {
           <Outlet />
         </AuthProvider>
         <MobileCta />
+        <CookieConsent />
         <AnalyticsBoot />
         <Scripts />
       </body>

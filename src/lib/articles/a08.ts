@@ -12,6 +12,7 @@ export const a08: Article = {
   },
   "publishedAt": "2026-09-18",
   "updatedAt": "2026-09-28",
+  "image": { "src": "/images/articles/08-cracked-concrete-tile-roof-los-angeles-1600.jpg", "alt": "A cracked concrete tile on a Los Angeles roof" },
   "relatedArticles": [
     "how-long-does-a-tile-roof-last",
     "roof-repair-vs-replacement",

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SlugRouteImport } from './routes/$slug'
+import { Route as AreaPerformanceRouteImport } from './routes/area-performance'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ApiAddressSuggestRouteImport } from './routes/api/address-suggest'
@@ -18,8 +19,13 @@ import { Route as ApiGeocodeRouteImport } from './routes/api/geocode'
 import { Route as ApiLeadsRouteImport } from './routes/api/leads'
 import { Route as ApiRoofMeasureRouteImport } from './routes/api/roof-measure'
 import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
+import { Route as OfficeLeadsRouteImport } from './routes/office.leads'
+import { Route as OfficeMarketingRouteImport } from './routes/office.marketing'
 import { Route as ServiceAreasIndexRouteImport } from './routes/service-areas.index'
 import { Route as ServiceAreasCityRouteImport } from './routes/service-areas.$city'
+import { Route as ApiAnalyticsVisitRouteImport } from './routes/api/analytics.visit'
+import { Route as ApiOfficeSessionRouteImport } from './routes/api/office.session'
+import { Route as ApiOfficeLeadPhotoIdRouteImport } from './routes/api/office.lead-photo.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,6 +35,11 @@ const IndexRoute = IndexRouteImport.update({
 const SlugRoute = SlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreaPerformanceRoute = AreaPerformanceRouteImport.update({
+  id: '/area-performance',
+  path: '/area-performance',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -66,6 +77,16 @@ const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
   path: '/articles/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OfficeLeadsRoute = OfficeLeadsRouteImport.update({
+  id: '/office/leads',
+  path: '/office/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfficeMarketingRoute = OfficeMarketingRouteImport.update({
+  id: '/office/marketing',
+  path: '/office/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceAreasIndexRoute = ServiceAreasIndexRouteImport.update({
   id: '/service-areas/',
   path: '/service-areas/',
@@ -76,10 +97,26 @@ const ServiceAreasCityRoute = ServiceAreasCityRouteImport.update({
   path: '/service-areas/$city',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAnalyticsVisitRoute = ApiAnalyticsVisitRouteImport.update({
+  id: '/api/analytics/visit',
+  path: '/api/analytics/visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiOfficeSessionRoute = ApiOfficeSessionRouteImport.update({
+  id: '/api/office/session',
+  path: '/api/office/session',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiOfficeLeadPhotoIdRoute = ApiOfficeLeadPhotoIdRouteImport.update({
+  id: '/api/office/lead-photo/$id',
+  path: '/api/office/lead-photo/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/area-performance': typeof AreaPerformanceRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/address-suggest': typeof ApiAddressSuggestRoute
@@ -87,12 +124,18 @@ export interface FileRoutesByFullPath {
   '/api/leads': typeof ApiLeadsRoute
   '/api/roof-measure': typeof ApiRoofMeasureRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/office/leads': typeof OfficeLeadsRoute
+  '/office/marketing': typeof OfficeMarketingRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
+  '/api/analytics/visit': typeof ApiAnalyticsVisitRoute
+  '/api/office/session': typeof ApiOfficeSessionRoute
+  '/api/office/lead-photo/$id': typeof ApiOfficeLeadPhotoIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/area-performance': typeof AreaPerformanceRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/address-suggest': typeof ApiAddressSuggestRoute
@@ -100,13 +143,19 @@ export interface FileRoutesByTo {
   '/api/leads': typeof ApiLeadsRoute
   '/api/roof-measure': typeof ApiRoofMeasureRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/office/leads': typeof OfficeLeadsRoute
+  '/office/marketing': typeof OfficeMarketingRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas': typeof ServiceAreasIndexRoute
+  '/api/analytics/visit': typeof ApiAnalyticsVisitRoute
+  '/api/office/session': typeof ApiOfficeSessionRoute
+  '/api/office/lead-photo/$id': typeof ApiOfficeLeadPhotoIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/area-performance': typeof AreaPerformanceRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/address-suggest': typeof ApiAddressSuggestRoute
@@ -114,14 +163,20 @@ export interface FileRoutesById {
   '/api/leads': typeof ApiLeadsRoute
   '/api/roof-measure': typeof ApiRoofMeasureRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/office/leads': typeof OfficeLeadsRoute
+  '/office/marketing': typeof OfficeMarketingRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
+  '/api/analytics/visit': typeof ApiAnalyticsVisitRoute
+  '/api/office/session': typeof ApiOfficeSessionRoute
+  '/api/office/lead-photo/$id': typeof ApiOfficeLeadPhotoIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/$slug'
+    | '/area-performance'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/address-suggest'
@@ -129,12 +184,18 @@ export interface FileRouteTypes {
     | '/api/leads'
     | '/api/roof-measure'
     | '/articles/$slug'
+    | '/office/leads'
+    | '/office/marketing'
     | '/service-areas/$city'
     | '/service-areas/'
+    | '/api/analytics/visit'
+    | '/api/office/session'
+    | '/api/office/lead-photo/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$slug'
+    | '/area-performance'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/address-suggest'
@@ -142,12 +203,18 @@ export interface FileRouteTypes {
     | '/api/leads'
     | '/api/roof-measure'
     | '/articles/$slug'
+    | '/office/leads'
+    | '/office/marketing'
     | '/service-areas/$city'
     | '/service-areas'
+    | '/api/analytics/visit'
+    | '/api/office/session'
+    | '/api/office/lead-photo/$id'
   id:
     | '__root__'
     | '/'
     | '/$slug'
+    | '/area-performance'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/address-suggest'
@@ -155,13 +222,19 @@ export interface FileRouteTypes {
     | '/api/leads'
     | '/api/roof-measure'
     | '/articles/$slug'
+    | '/office/leads'
+    | '/office/marketing'
     | '/service-areas/$city'
     | '/service-areas/'
+    | '/api/analytics/visit'
+    | '/api/office/session'
+    | '/api/office/lead-photo/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SlugRoute: typeof SlugRoute
+  AreaPerformanceRoute: typeof AreaPerformanceRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiAddressSuggestRoute: typeof ApiAddressSuggestRoute
@@ -169,8 +242,13 @@ export interface RootRouteChildren {
   ApiLeadsRoute: typeof ApiLeadsRoute
   ApiRoofMeasureRoute: typeof ApiRoofMeasureRoute
   ArticlesSlugRoute: typeof ArticlesSlugRoute
+  OfficeLeadsRoute: typeof OfficeLeadsRoute
+  OfficeMarketingRoute: typeof OfficeMarketingRoute
   ServiceAreasCityRoute: typeof ServiceAreasCityRoute
   ServiceAreasIndexRoute: typeof ServiceAreasIndexRoute
+  ApiAnalyticsVisitRoute: typeof ApiAnalyticsVisitRoute
+  ApiOfficeSessionRoute: typeof ApiOfficeSessionRoute
+  ApiOfficeLeadPhotoIdRoute: typeof ApiOfficeLeadPhotoIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -187,6 +265,13 @@ declare module '@tanstack/react-router' {
       path: '/$slug'
       fullPath: '/$slug'
       preLoaderRoute: typeof SlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/area-performance': {
+      id: '/area-performance'
+      path: '/area-performance'
+      fullPath: '/area-performance'
+      preLoaderRoute: typeof AreaPerformanceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -238,6 +323,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/office/leads': {
+      id: '/office/leads'
+      path: '/office/leads'
+      fullPath: '/office/leads'
+      preLoaderRoute: typeof OfficeLeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/office/marketing': {
+      id: '/office/marketing'
+      path: '/office/marketing'
+      fullPath: '/office/marketing'
+      preLoaderRoute: typeof OfficeMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service-areas/': {
       id: '/service-areas/'
       path: '/service-areas'
@@ -252,12 +351,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiceAreasCityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/analytics/visit': {
+      id: '/api/analytics/visit'
+      path: '/api/analytics/visit'
+      fullPath: '/api/analytics/visit'
+      preLoaderRoute: typeof ApiAnalyticsVisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/office/session': {
+      id: '/api/office/session'
+      path: '/api/office/session'
+      fullPath: '/api/office/session'
+      preLoaderRoute: typeof ApiOfficeSessionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/office/lead-photo/$id': {
+      id: '/api/office/lead-photo/$id'
+      path: '/api/office/lead-photo/$id'
+      fullPath: '/api/office/lead-photo/$id'
+      preLoaderRoute: typeof ApiOfficeLeadPhotoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SlugRoute: SlugRoute,
+  AreaPerformanceRoute: AreaPerformanceRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiAddressSuggestRoute: ApiAddressSuggestRoute,
@@ -265,8 +386,13 @@ const rootRouteChildren: RootRouteChildren = {
   ApiLeadsRoute: ApiLeadsRoute,
   ApiRoofMeasureRoute: ApiRoofMeasureRoute,
   ArticlesSlugRoute: ArticlesSlugRoute,
+  OfficeLeadsRoute: OfficeLeadsRoute,
+  OfficeMarketingRoute: OfficeMarketingRoute,
   ServiceAreasCityRoute: ServiceAreasCityRoute,
   ServiceAreasIndexRoute: ServiceAreasIndexRoute,
+  ApiAnalyticsVisitRoute: ApiAnalyticsVisitRoute,
+  ApiOfficeSessionRoute: ApiOfficeSessionRoute,
+  ApiOfficeLeadPhotoIdRoute: ApiOfficeLeadPhotoIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

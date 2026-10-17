@@ -92,25 +92,39 @@ export function VisitBooking() {
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setError("");
+    const form = e.currentTarget;
+    form.querySelectorAll(".field-missing").forEach((el) => el.classList.remove("field-missing"));
+    const missing: string[] = [];
+    const mark = (name: string, label: string, bad: boolean) => {
+      const field = form.elements.namedItem(name);
+      if (!(field instanceof HTMLElement)) return;
+      if (!bad) {
+        field.removeAttribute("aria-invalid");
+        return;
+      }
+      field.setAttribute("aria-invalid", "true");
+      field.closest("label")?.classList.add("field-missing");
+      missing.push(label);
+    };
     const picked = parseIso(date);
-    if (!picked || date < minDay) {
-      setError("Pick a day from today forward.");
+    mark("name", "your name", name.trim().length < 2);
+    mark("phone", "a phone number", phone.replace(/\D/g, "").length < 10);
+    mark("address", "the address", address.trim().length < 2);
+    mark("visit-date", "a weekday from today on", !picked || date < minDay || picked.getDay() === 0);
+    mark("visit-time", "a time", !TIMES.includes(time));
+    if (promo) mark("email", "an email for the promotions", !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()));
+    if (missing.length) {
+      form.querySelector(".field-missing")?.scrollIntoView({ block: "center", behavior: "smooth" });
+      setError(
+        missing.length === 1
+          ? `Please fill in ${missing[0]}.`
+          : `Please fill in ${missing.slice(0, -1).join(", ")} and ${missing.at(-1)}.`,
+      );
       return;
     }
-    if (picked.getDay() === 0) {
-      setError("We visit Monday through Saturday. Pick another day.");
-      return;
-    }
-    if (!TIMES.includes(time)) {
-      setError("Pick a time for the visit.");
-      return;
-    }
-    if (promo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      setError("Add an email so we can send those promotions.");
-      return;
-    }
-    const hp = new FormData(e.currentTarget).get("citium_hp");
+    setError("");
+    const hpInput = e.currentTarget.elements.namedItem("citium_hp");
+    const hp = hpInput instanceof HTMLInputElement && !hpInput.readOnly ? hpInput.value : "";
     const dayLabel = formatDay(date);
     let lead;
     try {
@@ -198,7 +212,18 @@ export function VisitBooking() {
               </p>
             </div>
           ) : (
-            <form className="visit-form" onSubmit={submit} autoComplete="on">
+            <form
+              className="visit-form"
+              onSubmit={submit}
+              noValidate
+              autoComplete="on"
+              onInput={(ev) => {
+                const t = ev.target;
+                if (!(t instanceof HTMLElement)) return;
+                t.closest("label")?.classList.remove("field-missing");
+                if (t instanceof HTMLInputElement || t instanceof HTMLSelectElement) t.removeAttribute("aria-invalid");
+              }}
+            >
               <h2 id="visit-title">Book a free visit.</h2>
               <p className="visit-es">Visita a su casa, sin costo. Usted elige el día y la hora.</p>
               <div className="visit-row">
@@ -305,8 +330,7 @@ export function VisitBooking() {
                 </label>
               )}
               <label className="honeypot" aria-hidden="true">
-                Company
-                <input name="citium_hp" tabIndex={-1} autoComplete="off" defaultValue="" />
+                <input name="citium_hp" tabIndex={-1} autoComplete="off" readOnly defaultValue="" data-1p-ignore="true" data-lpignore="true" />
               </label>
               {error && (
                 <p className="form-error" role="alert">
