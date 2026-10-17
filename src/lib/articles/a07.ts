@@ -1,0 +1,15 @@
+import type { Article } from '@/lib/content';
+export const a07: Article = {
+  slug: "the-santa-anas-dont-break-good-roofs",
+  title: "The Santa Anas Don’t Break Good Roofs. They Expose Dead Ones.",
+  seoTitle: "Santa Ana Wind Roof Damage Checklist | Citium Roofing",
+  description: "Missing shingles, lifted flashing, and the leak that shows up in the first rain: a practical checklist for what to do after Santa Ana winds hit your L.A. roof.",
+  category: "Maintenance",
+  author: { name: "Citium Roofing Solutions" },
+  publishedAt: "2026-09-18",
+  image: { src: "/images/articles/09-santa-ana-wind-roof-damage-missing-shingles-1600.jpg", alt: "Missing asphalt shingles on a Los Angeles ranch roof after Santa Ana winds with dry hills behind" },
+  relatedArticles: ["if-they-ask-for-half-down-hang-up"],
+  relatedServices: [],
+  sections: [],
+  html: "<p class=\"article-kicker\">Tabs gone on the windward rake — this is usually an old seal strip, not a mysterious new weather event.</p>\n\n\n<p>Every fall and winter the Santa Anas run the same play across Glendale, Burbank and the foothills. Hot wind comes over the passes. Patio chairs migrate. Then a roof that “was fine” is missing a column of shingles on the west rake. The wind did the last 10%. The sun did the first 90%.</p>\n<p>After a wind event, the calls we get in Glendale and nearby cities tend to sort into two groups. Some stay <a href=\"/roof-repair-glendale-ca\">repairs</a>. Some are the moment we stop pretending.</p>\n\n<h2>What the wind actually grabs</h2>\n<ul>\n  <li>Shingle tabs whose seal strip baked to dust</li>\n  <li>Ridge caps</li>\n  <li>Edge metal that was nailed like a suggestion</li>\n  <li>Flat-roof corners and parapet flashings</li>\n  <li>Tiles that had already cracked and were sitting on powder felt</li>\n</ul>\n\n<h2>The night-of / morning-after checklist</h2>\n<ol>\n  <li>Photograph every slope and every piece on the lawn before cleanup.</li>\n  <li>Look at ceilings and the garage even if the sky is still blue. Wind damage leaks later.</li>\n  <li>If you have an active drip, call for a dry-in / tarp — not a same-day full contract.</li>\n  <li>Call your carrier if the damage is sudden and documented. Do not invent a hail story.</li>\n  <li>Hire a C-39 who will still answer the phone in March. See <a href=\"/articles/if-they-ask-for-half-down-hang-up\">red flags</a>.</li>\n</ol>\n\n<h2>Repair vs. replace after wind</h2>\n<p>For the full decision, see <a href=\"/articles/roof-repair-vs-replacement\">roof repair vs roof replacement</a>. A dozen tabs on an 8-year roof: repair. A shredded field on a 23-year roof with bald faces: you were going to reroof anyway; the wind picked the week. The 25% rule of thumb is crude but useful — when a quarter of the field is compromised, or decking is wet in multiple bays, stop buying pouches of shingles.</p>\n<p>Want someone to look at it? <a href=\"/estimate\">Request an estimate</a> or a <a href=\"/roof-inspection-glendale-ca\">roof inspection</a>. Citium Roofing Solutions is based on N Brand Blvd in Glendale and serves Burbank, Pasadena, La Crescenta, Tujunga, Sunland and Alhambra.</p>",
+};

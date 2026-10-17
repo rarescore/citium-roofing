@@ -1,0 +1,57 @@
+
+@media(max-width:600px){.breadcrumbs{padding:19px 24px;font-size:11px}.page-intro{padding:25px 24px 42px}.page-intro :is(h1:not(.seo-h1),.display-line){font-size:56px;margin:20px 0 24px}.page-intro>p{font-size:15px}.form-page{padding:10px 24px 55px}.form-page .page-intro :is(h1:not(.seo-h1),.display-line){font-size:54px}.inquiry-form{padding:25px 20px;margin:0 -24px}.form-grid{gap:20px}.form-grid>label{grid-column:1/-1}.form-grid input,.form-grid textarea{font-size:16px}.inquiry-result{padding:28px 20px;margin:0 -24px}.inquiry-result h2{font-size:37px}.visualizer-scene{aspect-ratio:1.1}.scene-top{left:15px;right:15px;top:15px;gap:10px}.scene-top>span{font-size:8px;max-width:100px}.scene-top button{font-size:10px;padding:9px}.scene-bottom{left:20px;right:20px;bottom:18px}.scene-bottom h2{font-size:33px}.scene-bottom .eyebrow{font-size:10px}.visualizer-controls{display:block;padding:28px 24px}.visualizer-controls>*{margin-bottom:23px}.visualizer-controls .eyebrow{display:block}.swatch-grid img{height:65px}.swatch-grid button>span{font-size:12px}.visualizer-controls>.button{display:flex}.project-experience{padding:30px 24px 55px}.project-item{width:100%;gap:5px}.project-sidebar{gap:0}.project-sidebar>.fineprint{margin-top:16px}.demo-notice{padding:17px 24px;font-size:11px}.comparison{margin:0 -24px;aspect-ratio:1.25}.comparison>img{object-fit:cover}.before-label,.after-label{font-size:8px;padding:7px}.comparison-slider{padding-top:15px}.comparison-slider label{font-size:11px}.project-caption h2{font-size:32px}.neighborhood-map{height:350px;margin:0 -24px}.service-hero{padding:15px 24px 40px}.service-hero .page-intro :is(h1:not(.seo-h1),.display-line){font-size:54px}.service-material{height:300px;margin:0 -24px}.service-details,.faq-section{display:block;padding:50px 24px}.service-details h2{margin:18px 0 35px}.service-details h3{font-size:24px}.service-details article{margin-bottom:25px}.faq-section h2{margin-bottom:25px}.service-design-cta{padding:28px 24px}.related-links{padding:30px 24px;display:grid;gap:20px}.systems-index{grid-template-columns:1fr;margin:0 24px 25px}.systems-index>a{padding:30px 23px}.systems-index h2{font-size:37px}.service-availability{padding:0 24px 45px}.process-list{margin:0 24px}.process-list article{grid-template-columns:45px 1fr;gap:20px;padding:32px 0}.step-number{font-size:49px}.process-list h2{font-size:30px}.process-list p{font-size:14px}.step-note{font-size:11px}.process-end{display:block}.process-end h2{margin-bottom:25px;font-size:37px}.warranty-layout{display:block;padding:0 24px 45px}.warranty-statement{margin:0 -24px 40px;padding:35px 24px}.warranty-statement h2{font-size:40px;margin-top:30px}.about-copy{display:block;padding:50px 24px}.about-copy h2{margin-bottom:25px}.about-copy p{font-size:15px}.service-area{padding:45px 24px}.service-area>.eyebrow{font-size:10px}.service-area>div{gap:15px 25px}.service-area>div>span{font-size:20px}.resource-index{padding:0 24px 35px}.resource-toolbar{display:block}.resource-toolbar .choice{margin-top:15px}.resource-empty{padding:45px 0}.resource-empty h2{font-size:37px}.resource-empty p{font-size:15px}.resource-empty>div{display:flex;flex-direction:column;align-items:start;gap:25px}.prose{padding:0 24px 55px}.prose h1{font-size:45px}.prose h2{font-size:29px}.prose p{font-size:15px}.not-found-title{font-size:50px}}
+
+.roof-assembly{position:relative;min-width:0;background:#eeeae1}
+.assembly-canvas{position:relative;aspect-ratio:1.5;overflow:hidden}
+.assembly-reference{width:100%;height:100%;object-fit:contain;transition:opacity .45s}
+.roof-photo-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .45s;pointer-events:none}
+.layer-pointer{position:absolute;right:12px;top:26%;z-index:9;background:#f6f7efd9;padding:6px 10px;font-size:9px;letter-spacing:.1em;display:flex;gap:10px;align-items:center;border-bottom:1px solid #546349}
+.layer-pointer.pointer-1{top:6%}
+.layer-pointer.pointer-2{top:44%}
+.layer-pointer.pointer-3{top:53%}
+.layer-pointer.pointer-4{top:63%}
+.layer-pointer.pointer-5{top:82%}
+.assembly-controls{display:flex;gap:25px;align-items:center;justify-content:space-between;padding:17px 22px;border-top:1px solid #cecfc2}
+.assembly-controls>button{font-size:11px;padding:9px 12px;background:#f5f6ed;border:1px solid #bec6b7}
+.assembly-controls>div{width:150px;padding-bottom:10px}
+.assembly-controls label{font-size:10px;display:block;margin-bottom:13px}
+.assembly-controls [data-slot=slider-thumb]{width:16px;height:16px}
+.assembly-note{padding:0 22px 15px;font-size:10px;color:#6d7463}
+.page-design-your-roof .page-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:15px 60px;padding-bottom:35px;padding-top:16px;align-items:end}
+.page-design-your-roof .page-intro>.eyebrow{grid-column:1/-1}
+.page-design-your-roof .page-intro :is(h1:not(.seo-h1),.display-line){font-size:58px;margin:0}
+.page-design-your-roof .page-intro>p{font-size:15px;max-width:460px}
+.page-design-your-roof .visualizer{min-height:590px}
+.header .brand{display:flex;align-items:center;gap:10px}
+.header .brand img{width:66px;height:72px}
+.header .brand:after{content:'CITIUM\a ROOFING SOLUTIONS';white-space:pre;font-size:15px;font-weight:600;letter-spacing:.05em;line-height:1.3;color:#2c4030}
+
+@media(max-width:1200px){.header .brand:after{display:none}.anatomy-layout{gap:4vw}.assembly-controls{gap:15px;padding:15px}.assembly-controls>div{width:110px}}
+@media(max-width:800px){.anatomy-layout{grid-template-columns:1fr}.roof-assembly{margin-top:20px}.page-design-your-roof .page-intro{display:block}.page-design-your-roof .page-intro :is(h1:not(.seo-h1),.display-line){font-size:50px;margin:20px 0}.page-design-your-roof .page-intro>p{font-size:14px}.header .brand:after{display:block;font-size:12px}.header .brand img{width:48px;height:60px}}
+@media(max-width:600px){.roof-assembly{margin:28px -24px}.assembly-controls{padding:15px 24px}.assembly-controls>div{width:140px}.assembly-note{padding:0 24px 15px}.anatomy-layout{margin-top:25px}.page-design-your-roof .page-intro{padding-top:15px}.page-design-your-roof .page-intro :is(h1:not(.seo-h1),.display-line){font-size:46px}.page-design-your-roof .visualizer{min-height:0}.layer-pointer{font-size:8px}}
+
+
+/* Citium — architectural motion direction */
+:root{--background:#e7e3dc;--foreground:#2b2824;--primary:#8d4f31;--color-muted:#69615a;--color-ring:#d4aa73}
+body{font-family:'Manrope',Arial,sans-serif}
+.button{background:#352e29;border-color:#352e29}
+.button:hover{background:#815037}
+.header{background:#e7e3dc;border-bottom-color:#c6bfb4}
+.header .brand:after{color:#322b25}
+.nav a:hover{color:#965d3c}
+.cinematic-page{background:#191715}
+.cinematic-page>.header{position:absolute;top:0;left:0;right:0;z-index:40;background:transparent;border-bottom:1px solid #ffffff35;color:#fff;height:100px}
+.cinematic-page .header .brand:after{color:#fff}
+.cinematic-page .header .brand img{width:58px;height:72px}
+.cinematic-page .header .button{background:transparent;border:1px solid #ffffff65;color:#fff}
+.cinematic-page .header .button:hover{background:#f1e8d8;color:#26221e}
+.micro-label{font:500 11px/1.5 'Manrope',Arial,sans-serif;letter-spacing:.15em}
+.roof-journey{height:340svh;position:relative;background:#1b1815}
+.journey-stage{position:sticky;top:0;height:100svh;min-height:700px;overflow:hidden;background:#201b17}
+.hero-frame,.anatomy-frame{position:absolute;inset:0}
+.journey-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 48%;will-change:transform,opacity}
+.hero-toning{position:absolute;inset:0;background:linear-gradient(180deg,#15110d65,transparent 25%,transparent 45%,#120f0bdd)}
+.hero-editorial{position:absolute;left:5vw;bottom:16vh;color:#fff}
+.hero-editorial>.micro-label{display:block;margin-bottom:25px;max-width:350px}
+
+

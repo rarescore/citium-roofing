@@ -1,0 +1,133 @@
+@import './styles-p01.css';
+@import './styles-p02.css';
+@import './styles-p03.css';
+@import './styles-p04.css';
+@import './styles-p06.css';
+@import './styles-p05.css';
+@import './styles-p10.css';
+@import './styles-local.css';
+
+/* Batch 1 SEO: breadcrumb list layout + sticky mobile CTA + reduced-motion. */
+.breadcrumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.breadcrumbs li{display:inline-flex;align-items:center;gap:8px}
+.breadcrumbs .breadcrumb-sep{opacity:.55}
+.page-intro .seo-h1{font-size:12px;line-height:1.5;letter-spacing:.15em;font-weight:600;text-transform:uppercase;margin:0;max-width:60ch}
+.job-copy .seo-h1{font:500 11px/1.5 'Manrope',Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:0;color:#f0c36a}
+.studio-page-intro{padding:48px 6vw 28px}
+.studio-page-intro>*{max-width:720px}
+.studio-page-intro .seo-h1{font:600 13px/1.5 'Manrope',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.studio-page-intro .display-line{font-size:clamp(32px,4vw,48px);margin:0 0 12px;line-height:1.1}
+.studio-page-intro p{margin:0;max-width:52ch}
+.mobile-cta{display:none}
+@media (max-width:767.98px){
+  .mobile-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:8px;padding:10px;border-radius:14px;background:rgba(25,23,21,.94);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .mobile-cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border-radius:10px;font:600 13px/1 'Manrope',Arial,sans-serif;letter-spacing:.04em;text-decoration:none}
+  .mobile-cta .cta-call{background:#c5b5a0;color:#191715}
+  .mobile-cta .cta-estimate{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+  body{padding-bottom:84px}
+  html{scroll-padding-bottom:96px}
+  .mobile-cta{transition:transform .25s ease,opacity .25s ease}
+  .mobile-cta.is-hidden{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .job-video,.studio-canvas-wrap canvas{animation:none!important}
+}
+/* batch1: reserve space while the deferred Roof Studio loads */
+.roof-studio-placeholder{min-height:min(88svh,820px);background:#191715}
+/* batch1: phone/estimate links exist only inside the opened mobile menu */
+.nav .nav-estimate,.nav .nav-call{display:none}
+.nav.open .nav-estimate,.nav.open .nav-call{display:block;font-weight:600}
+.physical-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:4%}
+/* Poster-first hero film. Video stays invisible until frames decode. */
+.job-poster{position:absolute;inset:0;z-index:0;display:block}
+.job-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.job-stage .job-video{background:transparent;opacity:0;transition:opacity .45s ease}
+.job-stage .job-video.is-ready{opacity:1}
+.job-stage{transform:translate3d(0,0,0)}
+.job-copy .display-line{display:flex;flex-direction:column}
+.job-line{display:block;will-change:transform,opacity}
+.job-line-tear{opacity:calc(1 - var(--job-p, 0) * 1.15);transform:translate3d(0,calc(var(--job-p, 0) * -14px),0)}
+.job-line-rebuild{opacity:calc(.42 + var(--job-p, 0) * .58);transform:translate3d(0,calc((1 - var(--job-p, 0)) * 10px),0)}
+@media (max-width:900px){
+  .job-poster img,.job-video{object-position:center 38%}
+}
+@media (prefers-reduced-motion: reduce){
+  .job-video{display:none}
+  .job-line-tear,.job-line-rebuild{opacity:1;transform:none}
+}
+
+/* Second page: the booking card, centered, with the financing line around it. */
+.visit-page{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#191715;
+  color:#f4efe6;
+  padding:88px 28px 120px;
+  box-sizing:border-box;
+}
+.visit-frame{
+  position:relative;
+  width:min(1180px,100%);
+  display:grid;
+  grid-template-columns:minmax(240px,.72fr) minmax(0,1.35fr);
+  gap:48px;
+  align-items:center;
+}
+.visit-offer{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.visit-offer-financing,.visit-pay{
+  margin:0;
+  color:#e10600;
+  font:700 42px/0.95 'Barlow Condensed',sans-serif;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.visit-pay{font-size:28px;letter-spacing:.03em;max-width:16ch}
+.visit-card{
+  background:#f4efe6;
+  color:#2b241c;
+  border-radius:0;
+  width:100%;
+  box-sizing:border-box;
+  padding:48px 52px 40px;
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.visit-card h2{font-family:'Barlow Condensed',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.92;font-size:clamp(56px,5vw,76px);color:#2b241c;margin:0 0 12px}
+.visit-es{font-family:'Manrope',Arial,sans-serif;font-size:18px;line-height:1.45;color:#8a5a22;margin:0 0 22px}
+.visit-form{display:flex;flex-direction:column;gap:20px}
+.visit-row{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.visit-form label{display:flex;flex-direction:column;gap:8px;font:600 13px/1.3 'Manrope',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.visit-form input[type="text"],.visit-form input[type="tel"],.visit-form input[type="email"],.visit-form input[type="date"],.visit-form input:not([type]),.visit-form select{
+  font:400 20px/1.4 'Manrope',Arial,sans-serif;letter-spacing:0;text-transform:none;color:#2b241c;background:transparent;border:0;border-bottom:1px solid #c9b89a;border-radius:0;padding:14px 0;min-height:58px;width:100%;color-scheme:light;appearance:none
+}
+.visit-form input:focus,.visit-form select:focus{outline:none;border-bottom-color:#8a5a22}
+.visit-when{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+.visit-address{position:relative}
+.visit-address-field{position:relative;display:flex;align-items:center;gap:10px}
+.visit-address-field svg{color:#8a5a22;flex:none}
+.visit-address .address-suggest{top:calc(100% + 4px)}
+.visit-check{flex-direction:row!important;align-items:flex-start;gap:14px!important;text-transform:none;letter-spacing:0;font:400 18px/1.45 'Manrope',Arial,sans-serif!important;min-height:48px}
+.visit-check input{width:22px;height:22px;margin-top:2px;accent-color:#352e29;flex:none}
+.visit-form .button{margin-top:6px;min-height:64px;width:100%;justify-content:space-between;border-radius:0;background:#352e29;border-color:#352e29;color:#f4efe6;font-size:18px}
+.visit-form .button:hover{background:#815037;border-color:#815037}
+.visit-note{margin:0;font:400 15px/1.5 'Manrope',Arial,sans-serif;color:#5c4a36;letter-spacing:0;text-transform:none}
+.visit-form .form-error{margin:0}
+.visit-done{display:flex;flex-direction:column;gap:14px;min-height:280px;justify-content:center}
+.visit-done svg{color:#8a5a22}
+.visit-done h2{font-size:clamp(36px,5vw,48px)}
+.visit-done p{font:400 16px/1.5 'Manrope',Arial,sans-serif;color:#5c4a36;margin:0}
+@media (max-width:800px){
+  .visit-page{padding:84px 12px 120px}
+  .visit-frame{grid-template-columns:1fr;gap:22px}
+  .visit-offer-financing{font-size:34px}
+  .visit-pay{font-size:22px;max-width:none}
+  .visit-card{padding:28px 20px 22px}
+  .visit-card h2{font-size:44px}
+  .visit-form input[type="text"],.visit-form input[type="tel"],.visit-form input[type="email"],.visit-form input[type="date"],.visit-form input:not([type]),.visit-form select{font-size:18px;min-height:52px}
+  .visit-row,.visit-when{grid-template-columns:1fr}
+}
