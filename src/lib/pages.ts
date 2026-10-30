@@ -137,14 +137,14 @@ export const seoPages: SeoPage[] = [
     updated: U,
   },
   {
-    // Interactive tool that duplicates the homepage studio: noindex (kept for UX).
+    // Interactive roof visualizer: indexable (GSC fix 2026-10-29).
     path: "/design-your-roof",
     title: "Design Your Roof: Shingle, Tile & TPO Visualizer | Citium",
     description:
       "Preview shingle, tile, TPO and torch-down roof colors on a house, then send your design to Citium Roofing Solutions in Glendale to request an estimate.",
     h1: "Design Your Roof: Shingle, Tile & TPO Visualizer",
     label: "Design Your Roof",
-    index: false,
+    index: true,
     updated: U,
   },
   {
